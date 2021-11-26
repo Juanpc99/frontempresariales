@@ -1,0 +1,28 @@
+<h2>Detalles Planes</h2>
+<hr>
+
+<table class="table table-hover" aria-describedby="tablaVehiculos">
+
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> identificacion </th>
+            <th> Apellido </th>
+            <th> Nombre </th>
+            <th > Opciones </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td id="dataId">{{cliente.id}}</td>
+            <td id="dataPlaca">{{cliente.numeroIdentificacion}}</td>
+            <td id="dataNombre">{{cliente.primerApellido}}</td>
+            <td id="dataPagar">{{cliente.nombre}}</td>
+            <td>
+                <button routerLink="/editar">Editar</button>
+                <br>
+                <button (click)='eliminar()'>Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
